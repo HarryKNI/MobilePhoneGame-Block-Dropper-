@@ -19,8 +19,8 @@ public class Scenes : MonoBehaviour
         Volume = GameObject.Find("Volume_Bar");
         Settings.SetActive(false);
         Menu.SetActive(false);
-        VolumeSet = PlayerPrefs.GetFloat("volume");
 
+        VolumeSet = PlayerPrefs.GetFloat("volume");
         Volume.GetComponent<Slider>().value = VolumeSet;
     }
 
