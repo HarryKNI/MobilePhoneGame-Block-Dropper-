@@ -11,6 +11,14 @@ public class Scenes : MonoBehaviour
     public float VolumeSet;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    void Awake()
+    {
+        
+
+        VolumeSet = PlayerPrefs.GetFloat("Music_volume");
+    }
+
     void Start()
     {
         
@@ -20,8 +28,8 @@ public class Scenes : MonoBehaviour
         Settings.SetActive(false);
         Menu.SetActive(false);
 
-        VolumeSet = PlayerPrefs.GetFloat("volume");
         Volume.GetComponent<Slider>().value = VolumeSet;
+
     }
 
     // Update is called once per frame
@@ -64,11 +72,16 @@ public class Scenes : MonoBehaviour
 
     public void VolumeSlider()
     {
-        VolumeLevel = Volume.GetComponent<Slider>().value;
-        PlayerPrefs.SetFloat("volume", VolumeLevel);
+        VolumeLevel = Volume.GetComponent<Slider>().value; 
+        PlayerPrefs.SetFloat("Music_volume", VolumeLevel);
         PlayerPrefs.Save();
 
-       
+    }
+
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("Level 1");
     }
 
   
