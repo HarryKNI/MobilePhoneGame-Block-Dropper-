@@ -4,29 +4,28 @@ public class CubeMovement : MonoBehaviour
 {
     public bool isFlat = true;
     private Rigidbody rigid;
-    public Vector3 movement;
+    public float movement;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
-        movement.x = 1;
+        movement = 20f;
+        
         Input.gyro.enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Quaternion tilt = Input.gyro.attitude;
+        Quaternion Rotation = Quaternion.identity;
+        Quaternion DeviceRotation = new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * Input.gyro.attitude * new Quaternion(0, 0, 1, 0);
+        //Quaternion tilt = Input.gyro.attitude;
 
-        //if (isFlat)
-        //    tilt = Quaternion.Euler(90, 0, 0) * tilt;
+        float newmovement = DeviceRotation.x * movement;
 
-        float newmovement = tilt.y + movement.x;
+        rigid.linearVelocity = new Vector2(newmovement, 0f);
 
-        transform.position = new Vector3(newmovement, 0, 0);
-
-        //print(tilt);
     }
 
     public void test()

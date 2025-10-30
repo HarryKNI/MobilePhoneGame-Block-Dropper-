@@ -331,6 +331,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 151045816}
   m_CullTransparentMesh: 1
+--- !u!1 &177469419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 177469421}
+  - component: {fileID: 177469420}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &177469420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177469419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1d5823cd4a9b39499ca62f64b307d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Settings: {fileID: 0}
+  Menu: {fileID: 0}
+  Volume: {fileID: 0}
+  VolumeLevel: 0
+  VolumeSet: 0
+--- !u!4 &177469421
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177469419}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1429.003, y: 712.2782, z: -299.7569}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &209142690
 GameObject:
   m_ObjectHideFlags: 0
@@ -1017,6 +1066,7 @@ GameObject:
   - component: {fileID: 467989090}
   - component: {fileID: 467989089}
   - component: {fileID: 467989088}
+  - component: {fileID: 467989091}
   m_Layer: 5
   m_Name: Left_Button
   m_TagString: Untagged
@@ -1086,19 +1136,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 467989089}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 209142695}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: LeftMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &467989089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1137,6 +1175,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 467989086}
   m_CullTransparentMesh: 1
+--- !u!114 &467989091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467989086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: LeftMovementDOWN
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: LeftMovementUP
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &588386363
 GameObject:
   m_ObjectHideFlags: 0
@@ -1149,6 +1232,7 @@ GameObject:
   - component: {fileID: 588386367}
   - component: {fileID: 588386366}
   - component: {fileID: 588386365}
+  - component: {fileID: 588386368}
   m_Layer: 5
   m_Name: Right_Button
   m_TagString: Untagged
@@ -1218,19 +1302,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 588386366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 209142695}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: RightMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &588386366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1269,6 +1341,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588386363}
   m_CullTransparentMesh: 1
+--- !u!114 &588386368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588386363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: RightMovementDOWN
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: RightMovementUP
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &631743229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 526294589096774234, guid: f033f604378a9574da6d3f074aaf1e76, type: 3}
@@ -1314,7 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFlat: 1
-  movement: {x: 0, y: 0, z: 0}
+  movement: 0
 --- !u!1 &858616700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1515,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177469420}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
         m_MethodName: MenuScene
         m_Mode: 1
@@ -1706,8 +1823,9 @@ GameObject:
   - component: {fileID: 1077754033}
   - component: {fileID: 1077754032}
   - component: {fileID: 1077754031}
+  - component: {fileID: 1077754034}
   m_Layer: 5
-  m_Name: Up Button
+  m_Name: Up_Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1775,19 +1893,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1077754032}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 209142695}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: UpMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1077754032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1826,6 +1932,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1077754029}
   m_CullTransparentMesh: 1
+--- !u!114 &1077754034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1077754029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: UpMovementDOWN
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: UpMovementUP
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1080145700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2393,9 +2544,9 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177469420}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: VolumeSlider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2541,7 +2692,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 96
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1377347996
 GameObject:
@@ -2767,7 +2918,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177469420}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
         m_MethodName: ResumeButton
         m_Mode: 1
@@ -2900,7 +3051,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177469420}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
         m_MethodName: SettingsMenu
         m_Mode: 1
@@ -3346,6 +3497,7 @@ GameObject:
   - component: {fileID: 1555838910}
   - component: {fileID: 1555838909}
   - component: {fileID: 1555838908}
+  - component: {fileID: 1555838911}
   m_Layer: 5
   m_Name: Down_Button
   m_TagString: Untagged
@@ -3415,19 +3567,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1555838909}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 209142695}
-        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
-        m_MethodName: DownMovement
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1555838909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3466,6 +3606,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1555838906}
   m_CullTransparentMesh: 1
+--- !u!114 &1555838911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1555838906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: DownMovementDOWN
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 209142695}
+          m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+          m_MethodName: DownMovementUP
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1573647074
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,7 +3734,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177469420}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
         m_MethodName: Back
         m_Mode: 1
@@ -4592,7 +4777,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 177469420}
         m_TargetAssemblyTypeName: Scenes, Assembly-CSharp
         m_MethodName: ToggleMenu
         m_Mode: 1
@@ -4794,3 +4979,4 @@ SceneRoots:
   - {fileID: 1146705328}
   - {fileID: 1377347997}
   - {fileID: 1791238860}
+  - {fileID: 177469421}
