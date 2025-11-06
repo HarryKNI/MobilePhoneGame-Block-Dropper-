@@ -77,13 +77,9 @@ public class Scenes : MonoBehaviour
 
     }
 
-    public void VolumeSlider1()
-    {
-        VolumeLevel = Volume.GetComponent<Slider>().value;
-        PlayerPrefs.SetFloat("Music_volume", VolumeLevel);
-        PlayerPrefs.Save();
+    
 
-    }
+    
 
 
     public void PlayGame()
