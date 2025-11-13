@@ -11,7 +11,7 @@ public class CubeMovement : MonoBehaviour
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
-        movement = 20f;
+        movement = 10f;
         
         Input.gyro.enabled = true;
 
@@ -22,27 +22,25 @@ public class CubeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Quaternion Rotation = Quaternion.identity;
+        //Quaternion Rotation = Quaternion.identity;
         Quaternion DeviceRotation = new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * Input.gyro.attitude * new Quaternion(0, 0, 1, 0);
-
-        float newmovement = DeviceRotation.x * movement;
 
         print(DeviceRotation);
 
-        if (DeviceRotation.x == 0.5000f)
+        if (DeviceRotation.x < 0.5000f || DeviceRotation.x > 0.0f)
         {
             print("stopped");
         }
 
-        if (DeviceRotation.x < 0.5000f)
+        if (DeviceRotation.x < -0.2000f)
         {
-            rigid.linearVelocity = new Vector2(newmovement, 0f);
+            rigid.linearVelocity = new Vector2(movement, 0f);
             
         }
 
-        if (DeviceRotation.x > 0.5000f)
+        if (DeviceRotation.x > 0.2000f)
         {
-            rigid.linearVelocity = new Vector2(newmovement, 0f);
+            rigid.linearVelocity = new Vector2(-movement, 0f);
             
         }
 
