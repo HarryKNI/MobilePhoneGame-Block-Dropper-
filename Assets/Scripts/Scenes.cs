@@ -50,11 +50,13 @@ public class Scenes : MonoBehaviour
     public void ToggleMenu()
     {
         Menu.SetActive(true);
+        Time.timeScale = 0;
     }
 
     public void ResumeButton()
     {
         Menu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void SettingsMenu()
@@ -72,6 +74,7 @@ public class Scenes : MonoBehaviour
     {
         Settings.SetActive(false);
         Menu.SetActive(true);
+        Time.timeScale = 1;
     }
 
     public void VolumeSlider()
@@ -82,9 +85,14 @@ public class Scenes : MonoBehaviour
 
     }
 
-    
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 
-    
+
+
+
 
 
     public void PlayGame()

@@ -27,7 +27,7 @@ public class CubeMovement : MonoBehaviour
 
         print(DeviceRotation);
 
-        if (DeviceRotation.x < 0.5000f || DeviceRotation.x > 0.0f)
+        if (DeviceRotation.x <= 0.5000f || DeviceRotation.x > 0.0f)
         {
             print("stopped");
         }
