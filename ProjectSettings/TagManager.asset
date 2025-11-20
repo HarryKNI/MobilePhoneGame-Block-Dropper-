@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Movable
   - InGameMenu
+  - Blockade
+  - Button1
   layers:
   - Default
   - TransparentFX

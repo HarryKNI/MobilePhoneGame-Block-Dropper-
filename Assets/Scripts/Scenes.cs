@@ -17,12 +17,12 @@ public class Scenes : MonoBehaviour
     void Start()
     {
         // wont load volume set on main scene
-        Settings = GameObject.Find("Settings");
-        Menu = GameObject.Find("Menu");
-        Volume = GameObject.Find("Volume_Bar");
+        //Settings = GameObject.Find("Settings");
+        //Menu = GameObject.Find("Menu");
+        //Volume = GameObject.Find("Volume_Bar");
         
-        Settings.SetActive(false);
-        Menu.SetActive(false);
+        //Settings.SetActive(false);
+        //Menu.SetActive(false);
         
         VolumeSet = PlayerPrefs.GetFloat("Music_volume");
         Volume.GetComponent<Slider>().value = VolumeSet;
@@ -61,6 +61,11 @@ public class Scenes : MonoBehaviour
     {
         Settings.SetActive(true);
         Menu.SetActive(false);
+    }
+
+    public void MainSettingsMenu()
+    {
+        Settings.SetActive(true);
     }
 
     public void Back()

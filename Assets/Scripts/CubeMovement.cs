@@ -15,8 +15,8 @@ public class CubeMovement : MonoBehaviour
         
         Input.gyro.enabled = true;
 
-        right = false;
-        left = false;
+        //right = false;
+        //left = false;
     }
 
     // Update is called once per frame

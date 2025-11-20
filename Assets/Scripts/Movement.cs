@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     public GameObject Player;
 
-    private float MovementSpeed = 1.0f;
+    private float MovementSpeed = 5.0f;
     
     bool Up;
     bool Down;
@@ -31,28 +31,28 @@ public class Movement : MonoBehaviour
     {
         if (Down == true)
         {
-            transform.position = new Vector3(0f, 0f, MovementSpeed);
+            transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
         }
 
         if (Up == true)
         {
-            transform.position = new Vector3(0f, 0f, MovementSpeed);
+            transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
         }
 
         if (right == true)
         {
-            transform.position = new Vector3(0f, 0f, MovementSpeed);
+            transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
         }
 
         if (left == true)
         {
-            transform.position = new Vector3(0f, 0f, MovementSpeed);
+            transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
         }
