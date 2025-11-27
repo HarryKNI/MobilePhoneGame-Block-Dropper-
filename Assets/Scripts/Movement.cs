@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 public class Movement : MonoBehaviour
 {
     public GameObject Player;
+    public Camera Camera;
 
     private float MovementSpeed = 5.0f;
     
@@ -18,7 +19,6 @@ public class Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       Player = GameObject.Find("Player");
 
         Down = false;
         Up = false;
@@ -34,6 +34,7 @@ public class Movement : MonoBehaviour
             transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
+            
         }
 
         if (Up == true)
@@ -41,6 +42,7 @@ public class Movement : MonoBehaviour
             transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
+            
         }
 
         if (right == true)
@@ -48,6 +50,7 @@ public class Movement : MonoBehaviour
             transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
+            Camera.transform.Translate(1f * Time.deltaTime, 0f, 0f);
         }
 
         if (left == true)
@@ -55,6 +58,7 @@ public class Movement : MonoBehaviour
             transform.position = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(transform.position);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
+            Camera.transform.Translate(-1f * Time.deltaTime, 0f, 0f);
         }
     }
 

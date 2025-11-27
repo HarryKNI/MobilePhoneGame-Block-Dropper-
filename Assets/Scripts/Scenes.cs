@@ -37,14 +37,10 @@ public class Scenes : MonoBehaviour
         print("Volume Level " + VolumeLevel); 
     }
 
-    public void MenuScene()
+    public void SceneLoader(int SceneNum)
     {
-        SceneManager.LoadScene("Menu");
-    }
-
-    public void Level1Scene()
-    {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene(SceneNum);
+        Time.timeScale = 1.0f;
     }
 
     public void ToggleMenu()

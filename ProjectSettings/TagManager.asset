@@ -8,6 +8,7 @@ TagManager:
   - InGameMenu
   - Blockade
   - Button1
+  - Death_Box
   layers:
   - Default
   - TransparentFX
