@@ -3,6 +3,7 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     GameObject Blocker;
+    public Animator anim;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,13 +22,15 @@ public class Button : MonoBehaviour
         if (collision.gameObject.tag == "Button1")
         {
             Blocker = GameObject.Find("Blocker");
-            Blocker.SetActive(false);
+            //Blocker.SetActive(false);
+            anim.SetBool("Button_Pressed", true);
             print("trigger works");
         }
     }
 
     private void OnCollisionExit(Collision collision)
     {
-        Blocker.SetActive(true);
+        //Blocker.SetActive(true);
+        anim.SetBool("Button_Pressed", false);
     }
 }

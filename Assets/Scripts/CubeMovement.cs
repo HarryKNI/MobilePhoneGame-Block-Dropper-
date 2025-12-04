@@ -27,7 +27,7 @@ public class CubeMovement : MonoBehaviour
 
         print(DeviceRotation);
 
-        if (DeviceRotation.x <= 0.5000f || DeviceRotation.x > 0.0f)
+        if (DeviceRotation.x <= 0.5000f && DeviceRotation.x > 0.0f)
         {
             print("stopped");
         }
@@ -38,7 +38,7 @@ public class CubeMovement : MonoBehaviour
             
         }
 
-        if (DeviceRotation.x > 0.2000f)
+        if (DeviceRotation.x > 0.2000f && DeviceRotation.x < 0.5000)
         {
             rigid.linearVelocity = new Vector2(-movement, 0f);
             
