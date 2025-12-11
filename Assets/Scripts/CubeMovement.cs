@@ -25,7 +25,7 @@ public class CubeMovement : MonoBehaviour
         //Quaternion Rotation = Quaternion.identity;
         Quaternion DeviceRotation = new Quaternion(0.5f, 0.5f, -0.5f, 0.5f) * Input.gyro.attitude * new Quaternion(0, 0, 1, 0);
 
-        print(DeviceRotation);
+        //print(DeviceRotation);
 
         if (DeviceRotation.x <= 0.5000f && DeviceRotation.x > 0.0f)
         {

@@ -17,16 +17,17 @@ public class Button : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.tag == "Button1")
+        if (collider.gameObject.tag == "Button1")
         {
-            Blocker = GameObject.Find("Blocker");
-            //Blocker.SetActive(false);
+            //Blocker = GameObject.Find("Blocker");
+            ////Blocker.SetActive(false);
             anim.SetBool("Button_Pressed", true);
             print("trigger works");
         }
     }
+
 
     private void OnCollisionExit(Collision collision)
     {
