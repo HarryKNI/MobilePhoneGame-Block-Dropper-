@@ -17,9 +17,9 @@ public class LevelFinish : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Finish Line")
+        if (collision.gameObject.name == "Line")
         {
-            SceneManager.LoadScene("Menu");
+            SceneManager.LoadScene("");
         }
     }
 }

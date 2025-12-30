@@ -55,7 +55,7 @@ public class Movement : MonoBehaviour
             PlayerMovement = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(PlayerMovement);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
-            Camera.transform.Translate(1f * Time.deltaTime, 0f, 0f);
+            Camera.transform.Translate(2f * Time.deltaTime, 0f, 0f);
             
         }
 
@@ -64,7 +64,7 @@ public class Movement : MonoBehaviour
             PlayerMovement = new Vector3(0f, 0f, MovementSpeed * Time.deltaTime);
             Player.transform.Translate(PlayerMovement);
             Player.transform.rotation = Quaternion.LookRotation(MovementDirection);
-            Camera.transform.Translate(-1f * Time.deltaTime, 0f, 0f);
+            Camera.transform.Translate(-2f * Time.deltaTime, 0f, 0f);
             
         }
     }

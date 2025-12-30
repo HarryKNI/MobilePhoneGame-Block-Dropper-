@@ -9,6 +9,7 @@ TagManager:
   - Blockade
   - Button1
   - Death_Box
+  - Cube
   layers:
   - Default
   - TransparentFX
